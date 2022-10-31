@@ -15,6 +15,11 @@ class CarsController {
     const result = await this._service.create(car);
     return res.status(201).json(result);
   }
+
+  public async readAll(req: Request, res: Response<ICar[]>) {
+    const result = await this._service.readAll();
+    return res.status(200).json(result);
+  }
 }
 
 export default CarsController;
